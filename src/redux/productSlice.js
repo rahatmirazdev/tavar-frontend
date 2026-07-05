@@ -29,9 +29,8 @@ const saveToCache = (products) => {
       products,
       timestamp: Date.now(),
     }));
-  } catch (e) {
+  } catch {
     // Silently fail if localStorage is full
-    console.warn('Failed to cache products:', e.message);
   }
 };
 

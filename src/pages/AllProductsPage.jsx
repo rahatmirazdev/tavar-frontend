@@ -213,7 +213,6 @@ export default function AllProductsPage() {
         const results = await searchProducts(urlSearch, { limit: 50, sort: 'relevance' });
         setSearchResults(results);
       } catch (err) {
-        console.error('Search failed:', err);
         setSearchResults({ products: [], total: 0 });
       } finally {
         setSearchLoading(false);
