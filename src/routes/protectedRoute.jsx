@@ -1,5 +1,6 @@
 import { Navigate, Outlet } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import RouteTitleManager from '../components/RouteTitleManager';
 
 const resolveRole = (user) => {
   const role = user?.role;
@@ -15,7 +16,12 @@ const resolveRole = (user) => {
  */
 export function RequireAuth() {
   const { isAuthenticated } = useSelector((state) => state.auth);
-  return isAuthenticated ? <Outlet /> : <Navigate to="/login" replace />;
+  return isAuthenticated ? (
+    <>
+      <RouteTitleManager />
+      <Outlet />
+    </>
+  ) : <Navigate to="/login" replace />;
 }
 
 /**
@@ -34,7 +40,12 @@ export function ProtectedRoute() {
   const role = resolveRole(user);
   if (role !== 'admin' && role !== 'staff') return <Navigate to="/dashboard" replace />;
 
-  return <Outlet />;
+  return (
+    <>
+      <RouteTitleManager />
+      <Outlet />
+    </>
+  );
 }
 
 /**
@@ -53,7 +64,12 @@ export function AdminOnlyRoute() {
   const role = resolveRole(user);
   if (role !== 'admin') return <Navigate to="/dashboard" replace />;
 
-  return <Outlet />;
+  return (
+    <>
+      <RouteTitleManager />
+      <Outlet />
+    </>
+  );
 }
 
 /**
@@ -72,7 +88,12 @@ export function StaffRoute() {
   const role = resolveRole(user);
   if (role !== 'staff') return <Navigate to="/dashboard" replace />;
 
-  return <Outlet />;
+  return (
+    <>
+      <RouteTitleManager />
+      <Outlet />
+    </>
+  );
 }
 
 /**
@@ -91,7 +112,12 @@ export function UserRoute() {
   const role = resolveRole(user);
   if (role === 'admin' || role === 'staff') return <Navigate to="/dashboard" replace />;
 
-  return <Outlet />;
+  return (
+    <>
+      <RouteTitleManager />
+      <Outlet />
+    </>
+  );
 }
 
 // Alias kept for backward compatibility

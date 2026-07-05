@@ -1,12 +1,14 @@
 import { useRouteError, Link } from "react-router-dom";
 import Navbar from "../layouts/Navbar";
 import Footer from "../layouts/Footer";
+import RouteTitleManager from "../components/RouteTitleManager";
 
 export default function ErrorLayout() {
   const error = useRouteError();
 
   return (
     <>
+      <RouteTitleManager />
       <Navbar />
       <div style={{ minHeight: "calc(100vh - 400px)" }} className="flex items-center justify-center px-4">
         <div className="text-center max-w-md">

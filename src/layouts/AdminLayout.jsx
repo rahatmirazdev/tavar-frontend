@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { logout } from '../redux/authSlice';
 import { logout as logoutAPI } from '../services/authService';
 import { useNavigate } from 'react-router-dom';
+import RouteTitleManager from '../components/RouteTitleManager';
 
 const NAV_LINKS = [
   { to: '/admin',            label: 'Dashboard', end: true },
@@ -40,6 +41,7 @@ export default function AdminLayout() {
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
+      <RouteTitleManager />
 
       {/* Top bar */}
       <header className="bg-gray-900 text-white px-6 py-4 flex items-center justify-between flex-shrink-0">
