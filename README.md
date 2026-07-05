@@ -1,16 +1,49 @@
-# React + Vite
+# Tavas Frontend (Vite + React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Local development
 
-Currently, two official plugins are available:
+```bash
+npm install
+npm run dev
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Build for production
 
-## React Compiler
+```bash
+npm run build
+npm run preview
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Deploy to Vercel
 
-## Expanding the ESLint configuration
+This project is configured for Vercel with SPA route fallback in `vercel.json`.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 1) Import the repository into Vercel
+
+- Framework preset: `Vite`
+- Install command: `npm install`
+- Build command: `npm run build`
+- Output directory: `dist`
+
+### 2) Set environment variables in Vercel
+
+Set this variable in Project Settings -> Environment Variables:
+
+- `VITE_API_URL`: Base URL of your backend API in production.
+
+Example:
+
+```env
+VITE_API_URL=https://api.yourdomain.com
+```
+
+If `VITE_API_URL` is not set, the app falls back to `/api`.
+
+### 3) Redeploy
+
+After adding env vars, trigger a new deployment so Vite can inject the values at build time.
+
+## Notes
+
+- Client-side routes are handled by a rewrite to `index.html`.
+- The development proxy in `vite.config.js` is only for local development.
