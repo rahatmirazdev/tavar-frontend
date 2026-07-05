@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+/* Custom LightGallery styling for square, minimal design */
+:root {
+  --lg-color: #000000;
+  --lg-backdrop-color: rgba(0, 0, 0, 0.95);
+}
+
+/* Remove rounding from lightgallery elements */
+.lg-outer,
+.lg-container,
+.lg-item,
+.lg-img-wrap,
+.lg-video-play,
+.lg-control,
+.lg-next,
+.lg-prev,
+.lg-close,
+.lg-thumbnail-item,
+.lg-thumb-item {
+  border-radius: 0 !important;
+}
+
+/* Thumbnail styling */
+.lg-thumb-item {
+  border-radius: 0 !important;
+  border: 2px solid #e5e7eb;
+  transition: all 0.2s;
+}
+
+.lg-thumb-item.active {
+  border-color: #000000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.lg-thumb-item:hover {
+  border-color: #9ca3af;
+}
+
+/* Controls styling */
+.lg-control {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  color: #ffffff;
+  border-radius: 0 !important;
+  transition: all 0.2s;
+}
+
+.lg-control:hover {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+/* Close, next, prev buttons */
+.lg-close,
+.lg-next,
+.lg-prev {
+  background-color: rgba(0, 0, 0, 0.6) !important;
+  border-radius: 0 !important;
+  color: #ffffff !important;
+}
+
+.lg-close:hover,
+.lg-next:hover,
+.lg-prev:hover {
+  background-color: rgba(0, 0, 0, 0.9) !important;
+}
+
+/* Gallery toolbar */
+.lg-toolbar {
+  background-color: rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Video play button */
+.lg-video-play {
+  background-color: rgba(0, 0, 0, 0.6) !important;
+  border-radius: 0 !important;
+}
+
+.lg-video-play:hover {
+  background-color: rgba(0, 0, 0, 0.9) !important;
+}
+
+/* Thumbnail container */
+.lg-thumb-outer {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 16px;
+  background-color: #ffffff;
+}
