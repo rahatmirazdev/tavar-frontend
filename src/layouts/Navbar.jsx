@@ -128,7 +128,7 @@ export default function Navbar() {
 
             <div className="flex-shrink-0 flex items-center justify-center md:justify-start flex-1 md:flex-none">
               <Link to="/" className="text-2xl font-black tracking-tighter text-gray-900 uppercase italic">
-                CLTH<span className="text-red-600 not-italic">.</span>
+                Tavar<span className="text-red-600 not-italic">.</span>
               </Link>
             </div>
 

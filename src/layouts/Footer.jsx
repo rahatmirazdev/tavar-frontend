@@ -42,7 +42,7 @@ export default function Footer() {
           {/* Column 1: Brand Info */}
           <div className="col-span-2 md:col-span-1">
             <Link to="/" className="text-2xl font-black tracking-tighter text-white uppercase italic block mb-6">
-              CLTH<span className="text-orange-600 not-italic">.</span>
+              Tavar<span className="text-orange-600 not-italic">.</span>
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
               Engineered for the streets of Dhaka. Premium heavyweight cotton essentials for the modern man.
@@ -93,7 +93,7 @@ export default function Footer() {
               </li>
               <li className="flex flex-col">
                 <span className="text-xs font-bold text-gray-600 uppercase mb-1">Email</span>
-                <span className="text-white hover:text-orange-500 cursor-pointer">support@clth.com.bd</span>
+                <span className="text-white hover:text-orange-500 cursor-pointer">support@tavar.com.bd</span>
               </li>
               <li className="flex flex-col">
                 <span className="text-xs font-bold text-gray-600 uppercase mb-1">Location</span>
@@ -109,7 +109,7 @@ export default function Footer() {
       <div className="bg-black py-6 border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs text-gray-600 uppercase tracking-widest text-center md:text-left">
-            © 2026 CLTH Bangladesh. All rights reserved.
+            © 2026 Tavar Bangladesh. All rights reserved.
           </p>
           <div className="flex space-x-4 opacity-50 grayscale hover:grayscale-0 transition-all duration-300">
              {/* Simple Text Placeholders for Payment Logos - Replace with SVGs later if needed */}

@@ -31,7 +31,7 @@ export default function LoginPage() {
       <div className="w-full max-w-md">
         <div className="mb-8 text-center">
           <Link to="/" className="text-3xl font-black tracking-tighter text-gray-900 uppercase italic">
-            CLTH<span className="text-red-600 not-italic">.</span>
+            Tavar<span className="text-red-600 not-italic">.</span>
           </Link>
           <h1 className="mt-6 text-2xl font-black uppercase tracking-widest text-gray-900">
             Welcome Back
